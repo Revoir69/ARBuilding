@@ -9,12 +9,13 @@
     <a-scene embedded arjs>
 
             <a-assets>
-                    <a-asset-item id="edificio" src="./StreetScene.dae"></a-asset-item>
+                    <a-asset-item id="edi-obj" src="/path/to/StreetScene.obj"></a-asset-item>
+                    <a-asset-item id="edi-mtl" src="/path/to/StreetScene.mtl"></a-asset-item>
                 </a-assets>
 
       <a-marker preset="hiro">
           <!-- <a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
-          <a-entity collada-model="#edificio" scale="0.007 0.007 0.007"></a-entity>
+          a-entity obj-model="obj: #edi-obj; mtl: #edi-mtl"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
       <script>document.querySelector('#edificio').addEventListener('model-loaded', function() {

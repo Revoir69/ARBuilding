@@ -9,12 +9,12 @@
     <a-scene embedded arjs>
 
             <a-assets>
-                    <a-asset-item id="edificio" src="./scene.gltf"></a-asset-item>
+                    <a-asset-item id="edificio" src="./StreetScene.dae"></a-asset-item>
                 </a-assets>
 
       <a-marker preset="hiro">
           <!-- <a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
-          <a-entity gltf-model="#edificio" scale="0.003 0.003 0.003"></a-entity>
+          <a-entity collada-model="#edificio" scale="0.003 0.003 0.003"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
       <script>document.querySelector('#edificio').addEventListener('model-loaded', function() {
